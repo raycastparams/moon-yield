@@ -355,7 +355,7 @@ Title.BorderSizePixel = 0
 Title.Size = UDim2.new(0, 250, 0, 20)
 Title.Font = Enum.Font.SourceSans
 Title.TextSize = 18
-Title.Text = "Moon Yield ᯓᡣ𐭩 v" .. currentVersion
+Title.Text = "⏾ Moon Yield v" .. currentVersion
 
 do
 	local emoji = ({
@@ -13048,7 +13048,7 @@ if IsOnMobile then
 	QuickCapture.Position = UDim2.new(0.489, 0, 0, 0)
 	QuickCapture.Size = UDim2.new(0, 32, 0, 33)
 	QuickCapture.Font = Enum.Font.SourceSansBold
-	QuickCapture.Text = "ᯓᡣ𐭩"
+	QuickCapture.Text = "⏾"
 	QuickCapture.TextColor3 = Color3.fromRGB(255, 255, 255)
 	QuickCapture.TextSize = 20
 	QuickCapture.TextWrapped = true
