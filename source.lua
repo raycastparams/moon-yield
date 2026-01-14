@@ -146,6 +146,7 @@ if makefolder and isfolder and writefile and isfile then
         local hwid = gethwid() or game:GetService("RbxAnalyticsService"):GetClientId()
         if writefile then
             writefile("infiniteyield/moonyield/info/hwid", hwid)
+        end
 	end)
 end
 
