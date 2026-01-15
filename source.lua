@@ -13286,7 +13286,7 @@ task.spawn(function()
 			TextBox.Font = Enum.Font.Montserrat
 			TextBox.TextSize = 18
 			TextBox.TextWrapped = true
-			TextBox.Text = "Moon Yield is now in RES version.\n\nRevived as of 12/1/26\nI will try my best to update it."
+			TextBox.Text = latestVersionInfo.Announcement
 			TextBox.TextColor3 = currentText1
 			TextBox.TextXAlignment = Enum.TextXAlignment.Left
 			TextBox.TextYAlignment = Enum.TextYAlignment.Top
