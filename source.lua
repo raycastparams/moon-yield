@@ -4453,7 +4453,7 @@ function autoComplete(str,curText)
 end
 
 CMDs = {}
---[[
+
 UNCROOTURL = "https://raycastparams.github.io/resources/"
 UNCTABLE = {
     vUNC  = "vUNC.lua",
@@ -4472,18 +4472,18 @@ local function loadunc(url)
     local lI = game:HttpGet(ll)
     return (loadstring or load)(lI)()
 end
-]]
+
 -- unc tests start here woahh
-CMDs[#CMDs + 1] = {NAME = 'unc / utest', DESC = 'Tests your executor\'s functions'}
---[[CMDs[#CMDs + 1] = {NAME = 'sunc', DESC = 'sUNC tests woahhhh'}
-CMDs[#CMDs + 1] = {NAME = 'vunc', DESC = 'vunc test'}
-CMDs[#CMDs + 1] = {NAME = 'aetunc', DESC = 'aetunc test'}
-CMDs[#CMDs + 1] = {NAME = 'debunc', DESC = 'debunc test'}
-CMDs[#CMDs + 1] = {NAME = 'leunc', DESC = 'leunc test'}
-CMDs[#CMDs + 1] = {NAME = 'orzunc', DESC = 'orzunc test'}
-CMDs[#CMDs + 1] = {NAME = 'runc', DESC = 'runc test'}
-CMDs[#CMDs + 1] = {NAME = 'wunc', DESC = 'wunc test'}
-]]
+CMDs[#CMDs + 1] = {NAME = 'unc / unctest / unctestenv', DESC = 'Tests your executor\'s functions'}
+CMDs[#CMDs + 1] = {NAME = 'sunc / sunctest / sunctestenv', DESC = 'sUNC tests woahhhh'}
+CMDs[#CMDs + 1] = {NAME = 'vunc / vunctest / vunctestenv', DESC = 'vunc test'}
+CMDs[#CMDs + 1] = {NAME = 'aet / aetunc / aettest / aetenvtest', DESC = 'aetunc test'}
+CMDs[#CMDs + 1] = {NAME = 'debunc / debunctest / debunceenv', DESC = 'debunc test'}
+CMDs[#CMDs + 1] = {NAME = 'leunc / leuncenv', DESC = 'leunc test'}
+CMDs[#CMDs + 1] = {NAME = 'orzunc / orzenvtest  / orzenv', DESC = 'orzunc test'}
+CMDs[#CMDs + 1] = {NAME = 'runc / runctest / runctestenv', DESC = 'runc test'}
+CMDs[#CMDs + 1] = {NAME = 'wunc / wunctest / wunctestenv', DESC = 'wunc test'}
+
 -- actual cmds
 CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield discord server.'}
 CMDs[#CMDs + 1] = {NAME = 'guiscale [number]', DESC = 'Changes the size of the gui. [number] accepts both decimals and whole numbers. Min is 0.4 and Max is 2'}
@@ -6609,29 +6609,29 @@ addcmd('keepiy', {}, function(args, speaker)
 	end
 end)
 
-addcmd('unc', {}, function(args, speaker)
+addcmd('unc', {'unctest', 'unctestenv'}, function(args, speaker)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/refs/heads/main/UNCCheckEnv.lua"))()
 end)
 
-addcmd('sunc', {}, function(args, speaker)
+addcmd('sunc', {'sunctest', 'sunctestevn'}, function(args, speaker)
 	loadstring(game:HttpGet("https://script.sunc.su"))()
 end)
-addcmd('vunc', {}, function(args, speaker)
+addcmd('vunc', {'vunctest', 'vunctestenv'}, function(args, speaker)
 	loadunc("vUNC.lua")
 end)
-addcmd('wunc', {}, function(args, speaker)
+addcmd('wunc', {'wunc', 'wunctest', 'wunctestenv'}, function(args, speaker)
 	loadunc("wUNC.lua")
 end)
-addcmd('leunc', {}, function(args, speaker)
+addcmd('leunc', {'leuncenv'}, function(args, speaker)
 	loadunc("leUNC.lua")
 end)
-addcmd('orzunc', {}, function(args, speaker)
+addcmd('orzunc', {'orzenvtest', 'orzenv'}, function(args, speaker)
 	loadunc("orzUNC.lua")
 end)
-addcmd('runc', {}, function(args, speaker)
+addcmd('runc', {'runctest', 'runctestenv'}, function(args, speaker)
 	loadunc("rUNC.lua")
 end)
-addcmd('debunc', {}, function(args, speaker)
+addcmd('debunc', {'debunctest', 'debuncenv'}, function(args, speaker)
 	loadunc("debUNC.lua")
 end)
 addcmd('aetunc', {}, function(args, speaker)
