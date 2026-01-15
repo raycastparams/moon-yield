@@ -358,7 +358,7 @@ Title.Active = true
 Title.BackgroundColor3 = Color3.fromRGB(36,36,37)
 Title.BorderSizePixel = 0
 Title.Size = UDim2.new(0, 250, 0, 20)
-Title.Font = Enum.Font.SourceSans
+Title.Font = Enum.Font.Montserrat
 Title.TextSize = 18
 Title.Text = "Moon Yield RES v" .. currentVersion
 
@@ -417,7 +417,7 @@ Cmdbar.TextXAlignment = Enum.TextXAlignment.Left
 Cmdbar.TextColor3 = Color3.new(1, 1, 1)
 Cmdbar.Text = ""
 Cmdbar.ZIndex = 10
-Cmdbar.PlaceholderText = "Command Bar"
+Cmdbar.PlaceholderText = "pogggg"
 
 CMDsF.Name = "CMDs"
 CMDsF.Parent = Holder
@@ -13237,7 +13237,7 @@ CaptureService.CaptureEnded:Connect(function()
 	end)
 end)
 
---[[ task.spawn(function()
+task.spawn(function()
 	local success, latestVersionInfo = pcall(function() 
 		local versionJson = game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/version")
 		return HttpService:JSONDecode(versionJson)
@@ -13278,10 +13278,10 @@ end)
 			TextBox.BackgroundTransparency = 1
 			TextBox.Position = UDim2.new(0, 5, 0, 5)
 			TextBox.Size = UDim2.new(0, 350, 0, 140)
-			TextBox.Font = Enum.Font.SourceSans
+			TextBox.Font = Enum.Font.Montserrat
 			TextBox.TextSize = 18
 			TextBox.TextWrapped = true
-			TextBox.Text = latestVersionInfo.Announcement
+			TextBox.Text = "Moon Yield is now in RES version.\n\nRevived as of 12/1/26\nI will try my best to update it."
 			TextBox.TextColor3 = currentText1
 			TextBox.TextXAlignment = Enum.TextXAlignment.Left
 			TextBox.TextYAlignment = Enum.TextYAlignment.Top
@@ -13299,7 +13299,7 @@ end)
 			PopupText.BackgroundTransparency = 1
 			PopupText.Size = UDim2.new(1, 0, 0.95, 0)
 			PopupText.ZIndex = 10
-			PopupText.Font = Enum.Font.SourceSans
+			PopupText.Font = Enum.Font.Montserrat
 			PopupText.TextSize = 14
 			PopupText.Text = "Server Announcement"
 			PopupText.TextColor3 = currentText1
@@ -13332,7 +13332,8 @@ end)
 		end
 	end
 end)
-]]
+
+
 task.spawn(function()
     task.wait()
     pcall(function()
