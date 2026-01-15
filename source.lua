@@ -101,7 +101,6 @@ end, function()
 end)
 isLegacyChat = TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService
 
--- xylex & europa
 local iyassets = {
 	["infiniteyield/assets/bindsandplugins.png"] = "rbxassetid://5147695474",
 	["infiniteyield/assets/close.png"] = "rbxassetid://5054663650",
@@ -116,6 +115,10 @@ local iyassets = {
 	["infiniteyield/assets/reference.png"] = "rbxassetid://3523243755",
 	["infiniteyield/assets/settings.png"] = "rbxassetid://1204397029"
 }
+
+if isfolder("infiniteyield") and isfolder("infiniteyield/assets") and isfile("infiniteyield/assets/logo.png") then
+	delfile("infiniteyield/assets/logo.png")
+end
 
 local function getcustomasset(asset)
 	if waxgetcustomasset then
@@ -137,6 +140,7 @@ if makefolder and isfolder and writefile and isfile then
 				makefolder(folder)
 			end
 		end
+		
 		for path in iyassets do
 			if not isfile(path) then
 				writefile(path, game:HttpGet((path:gsub("infiniteyield/", assets))))
@@ -150,7 +154,8 @@ if makefolder and isfolder and writefile and isfile then
 	end)
 end
 
-currentVersion = "6.3.7"
+currentVersion = "6.3.7";
+
 
 ScaledHolder = Instance.new("Frame")
 Scale = Instance.new("UIScale")
@@ -766,7 +771,7 @@ Credits.Position = UDim2.new(0, 0, 0.9, 30)
 Credits.Size = UDim2.new(0, 250, 0, 20)
 Credits.Font = Enum.Font.SourceSansLight
 Credits.FontSize = Enum.FontSize.Size14
-Credits.Text = "Edge // Zwolf // Moon // Toon // Peyton // ATP // nxyq"
+Credits.Text = "raycastparams // nxyq"
 Credits.TextColor3 = Color3.new(1, 1, 1)
 Credits.ZIndex = 10
 
