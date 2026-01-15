@@ -4453,6 +4453,7 @@ function autoComplete(str,curText)
 end
 
 CMDs = {}
+--[[
 UNCROOTURL = "https://raycastparams.github.io/resources/"
 UNCTABLE = {
     vUNC  = "vUNC.lua",
@@ -4471,10 +4472,10 @@ local function loadunc(url)
     local lI = game:HttpGet(ll)
     return (loadstring or load)(lI)()
 end
-
+]]
 -- unc tests start here woahh
 CMDs[#CMDs + 1] = {NAME = 'unc / utest', DESC = 'Tests your executor\'s functions'}
-CMDs[#CMDs + 1] = {NAME = 'sunc', DESC = 'sUNC tests woahhhh'}
+--[[CMDs[#CMDs + 1] = {NAME = 'sunc', DESC = 'sUNC tests woahhhh'}
 CMDs[#CMDs + 1] = {NAME = 'vunc', DESC = 'vunc test'}
 CMDs[#CMDs + 1] = {NAME = 'aetunc', DESC = 'aetunc test'}
 CMDs[#CMDs + 1] = {NAME = 'debunc', DESC = 'debunc test'}
@@ -4482,6 +4483,7 @@ CMDs[#CMDs + 1] = {NAME = 'leunc', DESC = 'leunc test'}
 CMDs[#CMDs + 1] = {NAME = 'orzunc', DESC = 'orzunc test'}
 CMDs[#CMDs + 1] = {NAME = 'runc', DESC = 'runc test'}
 CMDs[#CMDs + 1] = {NAME = 'wunc', DESC = 'wunc test'}
+]]
 -- actual cmds
 CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield discord server.'}
 CMDs[#CMDs + 1] = {NAME = 'guiscale [number]', DESC = 'Changes the size of the gui. [number] accepts both decimals and whole numbers. Min is 0.4 and Max is 2'}
