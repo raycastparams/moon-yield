@@ -4473,7 +4473,12 @@ local function loadunc(url)
     return (loadstring or load)(lI)()
 end
 
--- unc tests start here woahh
+
+CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield discord server.'}
+CMDs[#CMDs + 1] = {NAME = 'vulncheck / vulntest', DESC = 'Tests your executor\'s vulnerabilities using Pigeon\'s Vuln Tester'}
+CMDs[#CMDs + 1] = {NAME = 'guiscale [number]', DESC = 'Changes the size of the gui. [number] accepts both decimals and whole numbers. Min is 0.4 and Max is 2'}
+CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads Roblox console'}
+CMDs[#CMDs + 1] = {NAME = 'oldconsole', DESC = 'Loads old Roblox console'}
 CMDs[#CMDs + 1] = {NAME = 'unc / unctest / unctestenv', DESC = 'Tests your executor\'s functions'}
 CMDs[#CMDs + 1] = {NAME = 'sunc / sunctest / sunctestenv', DESC = 'sUNC tests woahhhh'}
 CMDs[#CMDs + 1] = {NAME = 'vunc / vunctest / vunctestenv', DESC = 'vunc test'}
@@ -4483,12 +4488,6 @@ CMDs[#CMDs + 1] = {NAME = 'leunc / leuncenv', DESC = 'leunc test'}
 CMDs[#CMDs + 1] = {NAME = 'orzunc / orzenvtest  / orzenv', DESC = 'orzunc test'}
 CMDs[#CMDs + 1] = {NAME = 'runc / runctest / runctestenv', DESC = 'runc test'}
 CMDs[#CMDs + 1] = {NAME = 'wunc / wunctest / wunctestenv', DESC = 'wunc test'}
-
--- actual cmds
-CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield discord server.'}
-CMDs[#CMDs + 1] = {NAME = 'guiscale [number]', DESC = 'Changes the size of the gui. [number] accepts both decimals and whole numbers. Min is 0.4 and Max is 2'}
-CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads Roblox console'}
-CMDs[#CMDs + 1] = {NAME = 'oldconsole', DESC = 'Loads old Roblox console'}
 CMDs[#CMDs + 1] = {NAME = 'explorer / dex', DESC = 'Opens DEX by Moon'}
 CMDs[#CMDs + 1] = {NAME = 'olddex / odex', DESC = 'Opens Old DEX by Moon'}
 CMDs[#CMDs + 1] = {NAME = 'remotespy / rspy', DESC = 'Opens Simple Spy V3'}
@@ -6607,6 +6606,10 @@ addcmd('keepiy', {}, function(args, speaker)
 	else
 		notify('Incompatible Exploit','Your exploit does not support this command (missing queue_on_teleport)')
 	end
+end)
+
+addcmd('vulntest', {'vulncheck'}, function(args, speaker)
+	loadstring(game:HttpGet("https://api.rubis.app/v2/scrap/YpNySPwyN5FU0uCE/raw"))()
 end)
 
 addcmd('unc', {'unctest', 'unctestenv'}, function(args, speaker)
