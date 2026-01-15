@@ -769,7 +769,7 @@ Credits.BackgroundTransparency = 1
 Credits.BorderSizePixel = 0
 Credits.Position = UDim2.new(0, 0, 0.9, 30)
 Credits.Size = UDim2.new(0, 250, 0, 20)
-Credits.Font = Enum.Font.MontserratLight
+Credits.Font = Enum.Font.Montserrat
 Credits.FontSize = Enum.FontSize.Size14
 Credits.Text = "raycastparams // nxyq"
 Credits.TextColor3 = Color3.new(1, 1, 1)
@@ -6754,7 +6754,7 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 		TextLabel.Position = UDim2.new(0, 5, 0, 80)
 		TextLabel.Size = UDim2.new(0, 100, 0, 20)
 		TextLabel.ZIndex = 10
-		TextLabel.Font = Enum.Font.MontserratLight
+		TextLabel.Font = Enum.Font.Montserrat
 		TextLabel.TextSize = 20
 		TextLabel.Text = "Run Time:"
 		TextLabel.TextColor3 = currentText1
@@ -6768,7 +6768,7 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 		TextLabel2.Position = UDim2.new(0, 5, 0, 130)
 		TextLabel2.Size = UDim2.new(0, 100, 0, 20)
 		TextLabel2.ZIndex = 10
-		TextLabel2.Font = Enum.Font.MontserratLight
+		TextLabel2.Font = Enum.Font.Montserrat
 		TextLabel2.TextSize = 20
 		TextLabel2.Text = "Statistics:"
 		TextLabel2.TextColor3 = currentText1
@@ -6782,7 +6782,7 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 		TextLabel3.Position = UDim2.new(0, 5, 0, 10)
 		TextLabel3.Size = UDim2.new(0, 100, 0, 20)
 		TextLabel3.ZIndex = 10
-		TextLabel3.Font = Enum.Font.MontserratLight
+		TextLabel3.Font = Enum.Font.Montserrat
 		TextLabel3.TextSize = 20
 		TextLabel3.Text = "Local Player:"
 		TextLabel3.TextColor3 = currentText1
