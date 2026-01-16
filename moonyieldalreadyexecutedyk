@@ -1,0 +1,105 @@
+local _=Instance.new
+local __={}
+local ___=math.random
+local ____=string.char
+local _____=table.concat
+
+local function ______()
+    local l=___(10,20)
+    local t={}
+    for i=1,l do
+        t[i]=____(___(32,126))
+    end
+    return _____(t)
+end
+
+local _______=nil
+local ________=_("Frame")
+local _________=_("TextLabel")
+local __________=_("Frame")
+local ___________=_("TextLabel")
+
+local _________0 = get_hidden_gui or gethui
+if _________0 then
+    local g=_("ScreenGui")
+    g.Name=______()
+    g.Parent=_________0()
+    _________=g
+elseif (not is_sirhurt_closure) and syn and syn.protect_gui then
+    local g=_("ScreenGui")
+    g.Name=______()
+    syn.protect_gui(g)
+    g.Parent=COREGUI
+    _________=g
+elseif COREGUI:FindFirstChild("RobloxGui") then
+    _________=COREGUI.RobloxGui
+else
+    local g=_("ScreenGui")
+    g.Name=______()
+    g.Parent=COREGUI
+    _________=g
+end
+
+do
+    local s=__________
+    s.BackgroundColor3=Color3.fromRGB(46,46,47)
+    s.ZIndex=10
+    s.Size=UDim2.new(0,455,0,20)
+    s.Position=UDim2.new(0.327,0,-1,0)
+    s.BorderSizePixel=0
+    s.Parent=_________
+end
+
+do
+    local m=___________
+    m.BackgroundColor3=Color3.fromRGB(36,36,37)
+    m.ZIndex=10
+    m.Size=UDim2.new(0,455,0,215)
+    m.Position=UDim2.new(0,0,1,0)
+    m.BorderSizePixel=0
+    m.Parent=__________
+end
+
+do
+    local t=___________
+    t.Size=UDim2.new(0,130,0,20)
+    t.Position=UDim2.new(0.356,0,0,0)
+    t.BackgroundTransparency=1
+    t.TextColor3=Color3.fromRGB(255,255,255)
+    t.Text=("Moon".." ".."Yield")
+    t.ZIndex=10
+    t.Parent=__________
+end
+
+do
+    local m=____________
+    m.Size=UDim2.new(0,455,0,215)
+    m.Position=UDim2.new(0,0,0,0)
+    m.BackgroundTransparency=1
+    m.TextColor3=Color3.fromRGB(255,255,255)
+    m.Text=("Moon Yield has already been executed."..
+        " Rejoin if you want to re-execute.")
+    m.ZIndex=10
+    m.Parent=___________
+end
+
+__________:TweenPosition(
+    UDim2.new(0.327,0,0.327,0),
+    Enum.EasingDirection.InOut,
+    Enum.EasingStyle.Sine,
+    0.5,
+    true
+)
+
+task.wait(5)
+
+__________:TweenPosition(
+    UDim2.new(0.327,0,-1,0),
+    Enum.EasingDirection.InOut,
+    Enum.EasingStyle.Sine,
+    0.5,
+    true
+)
+
+task.wait(0.5)
+__________:Destroy()
