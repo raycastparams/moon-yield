@@ -5,7 +5,7 @@ history of owners:
 
 pkplaysrblx (https://github.com/pkplaysrblx) - Account flagged
 LycheeFeather (https://github.com/LycheeFeather) - Changed account name
-purplesstrat (https://github.com/purplesstrat) - Deleted repository due to lack of updates
+purplesstrat (https://github.com/purplesstrat) - Deleted repository due to lack of updates -- broo raycast
 and finally,
 
 me!! - Keeping the repository maintained on a chromebook
