@@ -17,7 +17,7 @@ repeat
 until game:IsLoaded() and (game.Players and (game.Players.LocalPlayer and game.Players.LocalPlayer.Character))
 
 if IY_LOADED and not _G.IY_DEBUG then
-	loadstring(game:HttpGetAsync("https://raycastparams.github.io/source/moonyieldalreadyexecutedyk"))()
+	loadstring(game:HttpGetAsync("https://raycastparams.github.io/moon-yield/moonyieldalreadyexecutedyk"))()
 	return
 end
 
