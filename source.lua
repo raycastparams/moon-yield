@@ -177,7 +177,7 @@ if makefolder and isfolder and writefile and isfile then
 	end)
 end
 
-currentVersion = "6.3.7";
+currentVersion = "6.4.0";
 
 
 ScaledHolder = Instance.new("Frame")
