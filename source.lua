@@ -4499,6 +4499,8 @@ end
 
 CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield discord server.'}
 CMDs[#CMDs + 1] = {NAME = 'ndex / dexplusplus / dex++', DESC = 'Loads the better version of Dex'}
+CMDs[#CMDs + 1] = {NAME = 'octospy / ospy', DESC = 'Loads octospy'}
+CMDs[#CMDs + 1] = {NAME = 'ketamine', DESC = 'Loads Ketamine'}
 CMDs[#CMDs + 1] = {NAME = 'vulncheck / vulntest', DESC = 'Tests your executor\'s vulnerabilities using Pigeon\'s Vuln Tester'}
 CMDs[#CMDs + 1] = {NAME = 'guiscale [number]', DESC = 'Changes the size of the gui. [number] accepts both decimals and whole numbers. Min is 0.4 and Max is 2'}
 CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads Roblox console'}
@@ -7417,6 +7419,15 @@ addcmd('cframeflyspeed',{'cflyspeed'},function(args, speaker)
 		CFspeed = args[1]
 	end
 end)
+
+addcmd('octospy',{'ospy'},function(args, speaker)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Octo-Spy/refs/heads/main/Main.lua", true))()
+end)
+
+addcmd('ketamine',{},function(args, speaker)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Ketamine/refs/heads/main/Ketamine.lua"))()
+end)
+
 
 Floating = false
 floatName = randomString()
