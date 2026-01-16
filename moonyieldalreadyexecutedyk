@@ -1,105 +1,86 @@
-local _=Instance.new
-local __={}
-local ___=math.random
-local ____=string.char
-local _____=table.concat
+Shadow = Instance.new("Frame")
+Title = Instance.new("TextLabel")
+Main = Instance.new("Frame")
+Message = Instance.new("TextLabel")
 
-local function ______()
-    local l=___(10,20)
-    local t={}
-    for i=1,l do
-        t[i]=____(___(32,126))
-    end
-    return _____(t)
+function randomString()
+	local length = math.random(10,20)
+	local array = {}
+	for i = 1, length do
+		array[i] = string.char(math.random(32, 126))
+	end
+	return table.concat(array)
 end
 
-local _______=nil
-local ________=_("Frame")
-local _________=_("TextLabel")
-local __________=_("Frame")
-local ___________=_("TextLabel")
-
-local _________0 = get_hidden_gui or gethui
-if _________0 then
-    local g=_("ScreenGui")
-    g.Name=______()
-    g.Parent=_________0()
-    _________=g
-elseif (not is_sirhurt_closure) and syn and syn.protect_gui then
-    local g=_("ScreenGui")
-    g.Name=______()
-    syn.protect_gui(g)
-    g.Parent=COREGUI
-    _________=g
-elseif COREGUI:FindFirstChild("RobloxGui") then
-    _________=COREGUI.RobloxGui
+PARENT = nil
+if get_hidden_gui or gethui then
+	local hiddenUI = get_hidden_gui or gethui
+	local Main = Instance.new("ScreenGui")
+	Main.Name = randomString()
+	Main.Parent = hiddenUI()
+	PARENT = Main
+elseif (not is_sirhurt_closure) and (syn and syn.protect_gui) then
+	local Main = Instance.new("ScreenGui")
+	Main.Name = randomString()
+	syn.protect_gui(Main)
+	Main.Parent = COREGUI
+	PARENT = Main
+elseif COREGUI:FindFirstChild('RobloxGui') then
+	PARENT = COREGUI.RobloxGui
 else
-    local g=_("ScreenGui")
-    g.Name=______()
-    g.Parent=COREGUI
-    _________=g
+	local Main = Instance.new("ScreenGui")
+	Main.Name = randomString()
+	Main.Parent = COREGUI
+	PARENT = Main
 end
 
-do
-    local s=__________
-    s.BackgroundColor3=Color3.fromRGB(46,46,47)
-    s.ZIndex=10
-    s.Size=UDim2.new(0,455,0,20)
-    s.Position=UDim2.new(0.327,0,-1,0)
-    s.BorderSizePixel=0
-    s.Parent=_________
-end
+Shadow.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+Shadow.ZIndex = 10
+Shadow.Size = UDim2.new(0,455,0,20)
+Shadow.Position = UDim2.new(0.327,0,-1,0)
+Shadow.BorderSizePixel = 0
+Shadow.Parent = PARENT
 
-do
-    local m=___________
-    m.BackgroundColor3=Color3.fromRGB(36,36,37)
-    m.ZIndex=10
-    m.Size=UDim2.new(0,455,0,215)
-    m.Position=UDim2.new(0,0,1,0)
-    m.BorderSizePixel=0
-    m.Parent=__________
-end
+Main.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+Main.ZIndex = 10
+Main.Size = UDim2.new(0,455,0,215)
+Main.Position = UDim2.new(0,0,1,0)
+Main.BorderSizePixel = 0
+Main.Parent = Shadow
 
-do
-    local t=___________
-    t.Size=UDim2.new(0,130,0,20)
-    t.Position=UDim2.new(0.356,0,0,0)
-    t.BackgroundTransparency=1
-    t.TextColor3=Color3.fromRGB(255,255,255)
-    t.Text=("Moon".." ".."Yield")
-    t.ZIndex=10
-    t.Parent=__________
-end
+Title.Size = UDim2.new(0,130,0,20)
+Title.Position = UDim2.new(0.356,0,0,0)
+Title.BackgroundTransparency = 1
+Title.TextColor3 = Color3.fromRGB(255,255,255)
+Title.Text = "Moon Yield"
+Title.ZIndex = 10
+Title.Parent = Shadow
 
-do
-    local m=____________
-    m.Size=UDim2.new(0,455,0,215)
-    m.Position=UDim2.new(0,0,0,0)
-    m.BackgroundTransparency=1
-    m.TextColor3=Color3.fromRGB(255,255,255)
-    m.Text=("An instance of IY / Moon Yield is already runnning."..
-        " Rejoin if you want to re-execute.")
-    m.ZIndex=10
-    m.Parent=___________
-end
+Message.Size = UDim2.new(0,455,0,215)
+Message.Position = UDim2.new(0,0,0,0)
+Message.BackgroundTransparency = 1
+Message.TextColor3 = Color3.fromRGB(255,255,255)
+Message.Text = "Moon Yield has already been executed. Rejoin if you want to re-execute."
+Message.ZIndex = 10
+Message.Parent = Main
 
-__________:TweenPosition(
-    UDim2.new(0.327,0,0.327,0),
-    Enum.EasingDirection.InOut,
-    Enum.EasingStyle.Sine,
-    0.5,
-    true
+Shadow:TweenPosition(
+	UDim2.new(0.327, 0, 0.327, 0),
+	Enum.EasingDirection.InOut,
+	Enum.EasingStyle.Sine,
+	0.5,
+	true
 )
 
 task.wait(5)
 
-__________:TweenPosition(
-    UDim2.new(0.327,0,-1,0),
-    Enum.EasingDirection.InOut,
-    Enum.EasingStyle.Sine,
-    0.5,
-    true
+Shadow:TweenPosition(
+	UDim2.new(0.327, 0, -1, 0),
+	Enum.EasingDirection.InOut,
+	Enum.EasingStyle.Sine,
+	0.5,
+	true
 )
 
 task.wait(0.5)
-__________:Destroy()
+Shadow:Destroy()
