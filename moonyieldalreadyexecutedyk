@@ -77,7 +77,7 @@ do
     m.Position=UDim2.new(0,0,0,0)
     m.BackgroundTransparency=1
     m.TextColor3=Color3.fromRGB(255,255,255)
-    m.Text=("Moon Yield has already been executed."..
+    m.Text=("An instance of IY / Moon Yield is already runnning."..
         " Rejoin if you want to re-execute.")
     m.ZIndex=10
     m.Parent=___________
