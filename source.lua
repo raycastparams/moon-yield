@@ -13,7 +13,7 @@ me!! - Keeping the repository maintained on a chromebook
 ]]
 
 loadstring(game:HttpGetAsync("https://api.rubis.app/v2/scrap/hRRHzpxAaj8CQGB4/raw"))();
-StarterGui:SetCore("DevConsoleVisible", true);
+game:GetService("StarterGui"):SetCore("DevConsoleVisible", true);
 
 repeat
     task.wait()
