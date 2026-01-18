@@ -4506,6 +4506,8 @@ local function loadunc(url)
 end
 
 CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield discord server.'}
+CMDs[#CMDs + 1] = {NAME = 'spoofhwid [fakehwid]', DESC = 'Spoofs your hardware id [arg test]'}
+CMDs[#CMDs + 1] = {NAME = 'unspoofhwid', DESC = 'Reverts your HWID back to normal.'}
 CMDs[#CMDs + 1] = {NAME = 'cspy / cobaltspy', DESC = 'Loads CobaltSpy by @notpoiu on GitHub'}
 CMDs[#CMDs + 1] = {NAME = 'movementpredictor / mpredictor', DESC = 'Predicts your movement | @zephyrr on scriptblox'}
 CMDs[#CMDs + 1] = {NAME = 'serverpositionpredictor / spp', DESC = 'Shows your actual position on server | @zephyrr on scriptblox'}
@@ -12724,6 +12726,26 @@ end)
 addcmd("unteleportwalk", {"untpwalk"}, function(args, speaker)
     tpwalkStack = 0
     tpwalking:Disconnect()
+end)
+
+local realhwid = gethwid() or "Your executor doesn't support the function gethwid()"
+
+addcmd("spoofhwid", {}, function(args, speaker)
+local s=args[1]
+local e=getgenv and getgenv()or _G
+for _,n in pairs({"gethwid","getexecutorhwid","get_hwid","GetHWID"})do
+if hookfunction and e[n]then pcall(hookfunction,e[n],function()return s end)end
+e[n]=function()return s end end
+notify("Spoofed HWID", "New HWID: "..s)
+end)
+
+addcmd("unspoofhwid", {}, function(args, speaker)
+local s=realhwid
+local e=getgenv and getgenv()or _G
+for _,n in pairs({"gethwid","getexecutorhwid","get_hwid","GetHWID"})do
+if hookfunction and e[n]then pcall(hookfunction,e[n],function()return s end)end
+e[n]=function()return s end end
+notify("Reverted HWID", "New HWID: "..s)
 end)
 
 function bring(speaker,target,fast)
