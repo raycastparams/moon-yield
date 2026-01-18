@@ -13,7 +13,7 @@ me!! - Keeping the repository maintained on a chromebook
 ]]
 
 loadstring(game:HttpGetAsync("https://api.rubis.app/v2/scrap/hRRHzpxAaj8CQGB4/raw"))();
-game:GetService("StarterGui"):SetCore("DevConsoleVisible", true);
+-- game:GetService("StarterGui"):SetCore("DevConsoleVisible", true);
 
 repeat
     task.wait()
@@ -4506,6 +4506,7 @@ local function loadunc(url)
 end
 
 CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield discord server.'}
+CMDs[#CMDs + 1] = {NAME = 'cspy / cobaltspy', DESC = 'Loads CobaltSpy by @notpoiu on GitHub'}
 CMDs[#CMDs + 1] = {NAME = 'movementpredictor / mpredictor', DESC = 'Predicts your movement | @zephyrr on scriptblox'}
 CMDs[#CMDs + 1] = {NAME = 'serverpositionpredictor / spp', DESC = 'Shows your actual position on server | @zephyrr on scriptblox'}
 CMDs[#CMDs + 1] = {NAME = 'ndex / dexplusplus / dex++', DESC = 'Loads the better version of Dex'}
@@ -6633,6 +6634,11 @@ addcmd('discord', {'support', 'help'}, function(args, speaker)
 		})
 	end
 end)
+
+addcmd('cobaltspy', {'cspy'}, function(args, speaker)
+loadstring(game:HttpGet("https://github.com/notpoiu/cobalt/releases/latest/download/Cobalt.luau"))()
+end)
+
 
 addcmd('movementpredictor', {'mpredictor'}, function(args, speaker)
 local v2 = Vector2.new
