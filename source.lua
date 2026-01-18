@@ -4486,6 +4486,33 @@ end
 
 CMDs = {}
 
+if IsOnMobile then
+	local QuickCapture = Instance.new("TextButton")
+	local UICorner = Instance.new("UICorner")
+	QuickCapture.Name = randomString()
+	QuickCapture.Parent = PARENT
+	QuickCapture.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+	QuickCapture.BackgroundTransparency = 0.14
+	QuickCapture.Position = UDim2.new(0.489, 0, 0, 0)
+	QuickCapture.Size = UDim2.new(0, 32, 0, 33)
+	QuickCapture.Font = Enum.Font.MontserratBold
+	QuickCapture.Text = "PS"
+	QuickCapture.TextColor3 = Color3.fromRGB(255, 255, 255)
+	QuickCapture.TextSize = 20
+	QuickCapture.TextWrapped = true
+	QuickCapture.ZIndex = 10
+	QuickCapture.Draggable = true
+	UICorner.Name = randomString()
+	UICorner.CornerRadius = UDim.new(0.5, 0)
+	UICorner.Parent = QuickCapture
+	QuickCapture.MouseButton1Click:Connect(function()
+		Cmdbar:CaptureFocus()
+		maximizeHolder()
+	end)
+	table.insert(shade1, QuickCapture)
+	table.insert(text1, QuickCapture)
+end
+
 UNCROOTURL = "https://raycastparams.github.io/resources/"
 UNCTABLE = {
     vUNC  = "vUNC.lua",
@@ -8280,6 +8307,7 @@ RunService.RenderStepped:Connect(function(delta)
 	local darkColor = Color3.fromHSV(hue, 1, 0.7)
 	Dark.BackgroundColor3 = darkColor
 	Title.BackgroundColor3 = darkColor
+	QuickCapture.BackgroundColor3 = darkColor
 end)
 end)
 
@@ -13703,7 +13731,7 @@ addcmd("debug", {}, function(args, speaker)
     _G.IY_DEBUG = opt
     notify("debug", tostring(opt), 1)
 end)
-
+--[[
 if IsOnMobile then
 	local QuickCapture = Instance.new("TextButton")
 	local UICorner = Instance.new("UICorner")
@@ -13730,7 +13758,7 @@ if IsOnMobile then
 	table.insert(shade1, QuickCapture)
 	table.insert(text1, QuickCapture)
 end
-
+]]
 pcall(function() Scale.Scale = math.max(Holder.AbsoluteSize.X / 1920, guiScale) end)
 Scale.Parent = ScaledHolder
 ScaledHolder.Size = UDim2.fromScale(1 / Scale.Scale, 1 / Scale.Scale)
