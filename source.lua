@@ -4506,7 +4506,8 @@ local function loadunc(url)
 end
 
 CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield discord server.'}
-CMDs[#CMDs + 1] = {NAME = 'spoofhwid [fakehwid]', DESC = 'Spoofs your hardware id [arg test]'}
+CMDs[#CMDs + 1] = {NAME = 'rainbow / rainbowui / rui', DESC = 'Makes the UI rainbow'}
+CMDs[#CMDs + 1] = {NAME = 'spoofhwid [fakehwid]', DESC = 'Spoofs your hardware id'}
 CMDs[#CMDs + 1] = {NAME = 'unspoofhwid', DESC = 'Reverts your HWID back to normal.'}
 CMDs[#CMDs + 1] = {NAME = 'cspy / cobaltspy', DESC = 'Loads CobaltSpy by @notpoiu on GitHub'}
 CMDs[#CMDs + 1] = {NAME = 'movementpredictor / mpredictor', DESC = 'Predicts your movement | @zephyrr on scriptblox'}
@@ -8269,6 +8270,17 @@ addcmd('tweenspeed',{'tspeed'},function(args, speaker)
 	if tonumber(newSpeed) then
 		tweenSpeed = tonumber(newSpeed)
 	end
+end)
+
+addcmd('rui',{'rainbow', 'rainbowui'},function(args, speaker)
+local hue = 0
+RunService.RenderStepped:Connect(function(delta)
+	hue = (hue + delta * 0.15) % 1
+	Holder.BackgroundColor3 = Color3.fromHSV(hue, 1, 1)
+	local darkColor = Color3.fromHSV(hue, 1, 0.7)
+	Dark.BackgroundColor3 = darkColor
+	Title.BackgroundColor3 = darkColor
+end)
 end)
 
 addcmd('tweenwaypoint',{'twp'},function(args, speaker)
