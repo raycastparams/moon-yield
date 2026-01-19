@@ -12,7 +12,7 @@ me!! - Keeping the repository maintained on a chromebook
 
 ]]
 
-loadstring(game:HttpGetAsync("https://api.rubis.app/v2/scrap/hRRHzpxAaj8CQGB4/raw"))();
+-- loadstring(game:HttpGetAsync("https://api.rubis.app/v2/scrap/hRRHzpxAaj8CQGB4/raw"))();
 -- game:GetService("StarterGui"):SetCore("DevConsoleVisible", true);
 
 repeat
@@ -12771,7 +12771,7 @@ end)
 local realhwid = gethwid() or "Your executor doesn't support the function gethwid()"
 
 addcmd("spoofhwid", {}, function(args, speaker)
-local s=args[1]
+local s=args[1] or (crypt.hash and crypt.hash(tick() .. tostring(math.random()), "sha256"))
 local e=getgenv and getgenv()or _G
 for _,n in pairs({"gethwid","getexecutorhwid","get_hwid","GetHWID"})do
 if hookfunction and e[n]then pcall(hookfunction,e[n],function()return s end)end
