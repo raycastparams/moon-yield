@@ -1,14 +1,8 @@
 --[[
 wsp,
-welcome to moon yield source, skid iyw
-history of owners:
+welcome to moon yield source
 
-pkplaysrblx (https://github.com/pkplaysrblx) - Account flagged
-LycheeFeather (https://github.com/LycheeFeather) - Changed account name
-purplesstrat (https://github.com/purplesstrat) - Deleted repository due to lack of updates -- broo raycast
-and finally,
-
-me!! - Keeping the repository maintained on a chromebook
+pluh
 
 ]]
 
@@ -19,13 +13,31 @@ repeat
     task.wait()
 until game:IsLoaded() and (game.Players and (game.Players.LocalPlayer and game.Players.LocalPlayer.Character))
 
-if IY_LOADED and not _G.IY_DEBUG then
-	loadstring(game:HttpGetAsync("https://raycastparams.github.io/moon-yield/moonyieldalreadyexecutedyk"))()
-	return
+if IY_LOADED and MOONYIELD_LOADED and not _G.IY_DEBUG then
+    loadstring(game:HttpGetAsync("https://raycastparams.github.io/moon-yield/moonyieldalreadyexecutedyk"))()
+    return
+end
+
+if IY_LOADED and not MOONYIELD_LOADED then
+	 local Containers = {CoreGui}
+    if gethui then table.insert(Containers, gethui()) end
+
+    for _, x in pairs(Containers) do
+        for _, d in pairs(x:GetChildren()) do
+            if d:IsA("ScreenGui") and d.ResetOnSpawn == false and d.DisplayOrder == 2147483647 then
+                d:Destroy()
+            end
+        end
+    end
+    IY_LOADED = false
+	
 end
 
 
-pcall(function() getgenv().IY_LOADED = true end)
+pcall(function()
+getgenv().IY_LOADED = true
+getgenv().MOONYIELD_LOADED = true
+end)
 
 
 function missing(t, f, fallback)
