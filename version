@@ -1,4 +1,4 @@
 {
-	"Version": "6.4.6",
-	"Announcement": "Moon Yield is in RES mode.\nThis version of Moon Yield is maintained by RaycastParams.\n\nhttps://github.com/raycastparams"
+	"Version": "6.4.8",
+	"Announcement": "Moon Yield has updated as of 30/1/26\n\nNew commands added:\nunloadmoonyield / unloadmy / unmy"
 }
