@@ -6,9 +6,6 @@ pluh
 
 ]]
 
--- loadstring(game:HttpGetAsync("https://api.rubis.app/v2/scrap/hRRHzpxAaj8CQGB4/raw"))();
--- game:GetService("StarterGui"):SetCore("DevConsoleVisible", true);
-
 repeat
     task.wait()
 until game:IsLoaded() and (game.Players and (game.Players.LocalPlayer and game.Players.LocalPlayer.Character))
@@ -193,7 +190,7 @@ if makefolder and isfolder and writefile and isfile then
 	end)
 end
 
-currentVersion = "6.4.6";
+currentVersion = "6.4.8";
 
 
 ScaledHolder = Instance.new("Frame")
@@ -4545,13 +4542,14 @@ local function loadunc(url)
 end
 
 CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield discord server.'}
+CMDs[#CMDs + 1] = {NAME = 'unloadmoonyield / unloadmy / unmy', DESC = 'Unloads the current instance of Moon Yield'}
 CMDs[#CMDs + 1] = {NAME = 'rainbow / rainbowui / rui', DESC = 'Makes the UI rainbow'}
 CMDs[#CMDs + 1] = {NAME = 'spoofhwid [fakehwid]', DESC = 'Spoofs your hardware id'}
 CMDs[#CMDs + 1] = {NAME = 'unspoofhwid', DESC = 'Reverts your HWID back to normal.'}
 CMDs[#CMDs + 1] = {NAME = 'cspy / cobaltspy', DESC = 'Loads CobaltSpy by @notpoiu on GitHub'}
 CMDs[#CMDs + 1] = {NAME = 'movementpredictor / mpredictor', DESC = 'Predicts your movement | @zephyrr on scriptblox'}
 CMDs[#CMDs + 1] = {NAME = 'serverpositionpredictor / spp', DESC = 'Shows your actual position on server | @zephyrr on scriptblox'}
-CMDs[#CMDs + 1] = {NAME = 'ndex / dexplusplus / dex++', DESC = 'Loads the better version of Dex'}
+CMDs[#CMDs + 1] = {NAME = 'ndex / nescodex', DESC = 'Loads the better version of Dex'}
 CMDs[#CMDs + 1] = {NAME = 'octospy / ospy', DESC = 'Loads octospy'}
 CMDs[#CMDs + 1] = {NAME = 'ketamine', DESC = 'Loads Ketamine'}
 CMDs[#CMDs + 1] = {NAME = 'vulncheck / vulntest', DESC = 'Tests your executor\'s vulnerabilities using Pigeon\'s Vuln Tester'}
@@ -7264,8 +7262,23 @@ addcmd('keepiy', {}, function(args, speaker)
 	end
 end)
 
-addcmd('ndex', {'dexplusplus', 'dex++'}, function(args, speaker)
+addcmd('ndex', {'nescodex'}, function(args, speaker)
 	loadstring(game:HttpGet("https://nescoroco.lat/NDexV01.txt"))()
+end)
+
+addcmd('unloadmoonyield', {'unloadmy', 'unmy'}, function(args, speaker)
+	 local Containers = {CoreGui}
+    if gethui then table.insert(Containers, gethui()) end
+
+    for _, x in pairs(Containers) do
+        for _, d in pairs(x:GetChildren()) do
+            if d:IsA("ScreenGui") and d.ResetOnSpawn == false and d.DisplayOrder == 2147483647 then
+                d:Destroy()
+            end
+        end
+    end
+    IY_LOADED = false
+	MOONYIELD_LOADED = false
 end)
 
 addcmd('vulntest', {'vulncheck'}, function(args, speaker)
