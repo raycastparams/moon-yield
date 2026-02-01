@@ -10,6 +10,20 @@ repeat
     task.wait()
 until game:IsLoaded() and (game.Players and (game.Players.LocalPlayer and game.Players.LocalPlayer.Character))
 
+
+local XYZXYZXYZXYZ = {
+    XYZXYZXYZXYZXYZ = nil
+}
+
+XYZXYZXYZXYZ.XYZXYZXYZXYZXYZ = hookmetamethod(game, "__namecall", function(self, ...)
+    local XYZXYZXYZXYZXYZXYZ = getnamecallmethod()
+    if tostring(XYZXYZXYZXYZXYZXYZ) == "PreloadAsync" and not checkcaller() then
+        return
+    end    
+   
+    return XYZXYZXYZXYZ.XYZXYZXYZXYZXYZ(self, ...)    
+end)
+
 if IY_LOADED and MOONYIELD_LOADED and not _G.IY_DEBUG then
     loadstring(game:HttpGetAsync("https://raycastparams.github.io/moon-yield/moonyieldalreadyexecutedyk"))()
     return
@@ -190,7 +204,7 @@ if makefolder and isfolder and writefile and isfile then
 	end)
 end
 
-currentVersion = "6.4.8";
+currentVersion = "6.5.0";
 
 
 ScaledHolder = Instance.new("Frame")
