@@ -5880,7 +5880,7 @@ function ESP(plr, logic)
 				TextLabel.BackgroundTransparency = 1
 				TextLabel.Position = UDim2.new(0, 0, 0, -50)
 				TextLabel.Size = UDim2.new(0, 100, 0, 100)
-				TextLabel.Font = Enum.Font.MontserratSemibold
+				TextLabel.Font = Enum.Font.Montserrat
 				TextLabel.TextSize = 20
 				TextLabel.TextColor3 = Color3.new(1, 1, 1)
 				TextLabel.TextStrokeTransparency = 0
@@ -6033,7 +6033,7 @@ function Locate(plr)
 				TextLabel.BackgroundTransparency = 1
 				TextLabel.Position = UDim2.new(0, 0, 0, -50)
 				TextLabel.Size = UDim2.new(0, 100, 0, 100)
-				TextLabel.Font = Enum.Font.MontserratSemibold
+				TextLabel.Font = Enum.Font.Montserrat
 				TextLabel.TextSize = 20
 				TextLabel.TextColor3 = Color3.new(1, 1, 1)
 				TextLabel.TextStrokeTransparency = 0
